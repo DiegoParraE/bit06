@@ -1,0 +1,32 @@
+body{
+    font-family: sans-serif;
+    min-height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(27deg, rgba(2,0,36,1) 0%, rgba(121,57,9,1) 45%, rgba(0,212,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article{
+    background: rgb(2,0,36);
+    background: linear-gradient(213deg, rgba(2,0,36,1) 0%, rgba(121,57,9,1) 45%, rgba(0,212,255,1) 100%);
+    padding: 30px 30px 36px 30px;
+    border-radius: 30px;
+    display: inline-block;
+    box-shadow: 16px 18px 20px 0px rgba(150,149,224,0.47);
+    -webkit-box-shadow: 16px 18px 20px 0px rgba(150,149,224,0.47);
+    -moz-box-shadow: 16px 18px 20px 0px rgba(150,149,224,0.47);
+}
+#foto{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border: solid white 7px;
+    border-radius: 50%;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
