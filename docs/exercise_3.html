@@ -10,19 +10,33 @@
     <h1 id="title">Hola!</h1>
     <form id="form" action="" method="post">
         <label for="name">
-        <p>¿Cómo te llamas?</p>
-        <input class="nombre_usuario" name="name" type="text" placeholder="Nombre" required>
+        <p>Identificate para llevarte a una sala.</p>
+        <input id= "nombre" class="nombre_usuario" name="name" type="text" placeholder="Nombre" required> 
+        <input id= "edad" class="edad_usuario" name="name" type="number" placeholder="Edad" required>
         <button type="submit" class="btn btn-outline-primary" id="send-res">Enviar</button>
         </label>
     </form>
     <script>
-        let form = document.getElementById('form');
+        let nombre = document.getElementById('nombre');
+        let edad = document.getElementById('edad');
         let title = document.getElementById('title');
 
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-            title.innerHTML = `¡¡Hola ${form.name.value}!!`;
-        });
+            if (nombre.value == "pepita" && edad.value >= 18){
+                        title.innerHTML = `¡¡Hola Pepita!!, Estas en la sala de espera 1`;
+                    }  
+            if (nombre.value == "pepita" && edad.value < 18){
+                        title.innerHTML = `¡¡Hola Pepita!!, Estas en la sala de espera 2`; 
+                    }
+            if (nombre.value != "pepita" && edad.value >= 18){
+                        title.innerHTML = `¡¡Hola ${nombre.value} !!, Estas en la sala de espera 3`;
+                    }
+            if (nombre.value != "pepita" && edad.value < 18){
+                        title.innerHTML = `¡¡Hola ${nombre.value}!!, Estas en la sala de espera 4`;
+                    }
+                }
+            );
     </script>
 </body>
 </html>
