@@ -12,7 +12,7 @@
         <label for="name">
         <p>¿Cómo te llamas?</p>
         <input class="nombre_usuario" name="name" type="text" placeholder="Nombre" required>
-        <button type="submit" class="btn btn-outline-primary" id="send-res">Enviar</button>
+        <button type="submit"  id="send-res">Enviar</button>
         </label>
     </form>
     <script>
@@ -21,7 +21,8 @@
 
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-            title.innerHTML = `¡¡Hola ${form.name.value}!!`;
+
+            title.innerHTML = Number(form.numero.value) * 3;
         });
     </script>
 </body>
