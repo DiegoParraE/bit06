@@ -10,7 +10,7 @@
     <h1 id="title">Hola!</h1>
     <form id="form" action="" method="post">
         <label for="name">
-        <p>Saltaremos en multiplos de 3</p>
+        <p>contemos hacia atras</p>
         <input class="numero_usuario" name="numero" type="number" placeholder="Numero" required>
         <button type="submit" class="btn btn-outline-primary" id="send-res">Enviar</button>
         </label>
@@ -21,20 +21,22 @@
 
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-            respuesta = [];
+            res = [];
             title.innerHTML = '';
 
-            for (let i = 0; i <= Number(form.numero.value); i++) {
-                i % 3 == 0 ? respuesta.push(i) : false;
-             }
+            event.preventDefault();
 
-             respuesta.forEach((id) => {
-             if (id > 0) {
-                let newItem = document.createElement('li');
-                newItem.innerHTML = `${id}`;
-                title.appendChild(newItem);
+            for (let i = Number(form.numero.value); i >= 0; i--) {
+                res.push(i);
+            }
+
+            res.forEach((id) => {
+                if (id > 0) {
+                    let newItem = document.createElement('li');
+                    newItem.innerHTML = `${id}`;
+                    title.appendChild(newItem);
                 }
-             });
+            });
         });
     </script>
 </body>

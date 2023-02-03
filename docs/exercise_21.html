@@ -10,7 +10,7 @@
     <h1 id="title">Hola!</h1>
     <form id="form" action="" method="post">
         <label for="name">
-        <p>¿Cómo te llamas?</p>
+        <p>soy un contador, te cuento numeros dependiendo el digito que selecciones</p>
         <input class="numero_usuario" name="numero" type="number" placeholder="Numero" required>
         <button type="submit" class="btn btn-outline-primary" id="send-res">Enviar</button>
         </label>
@@ -18,10 +18,15 @@
     <script>
         let form = document.getElementById('form');
         let title = document.getElementById('title');
+        let respuesta = 0;
 
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-            title.innerHTML = `¡¡Hola ${form.name.value}!!`;
+            for (let i = 0; i <= Number(form.numero.value); i++) {
+            respuesta = respuesta + i;
+            title.innerHTML = respuesta;
+    }
+
         });
     </script>
 </body>
