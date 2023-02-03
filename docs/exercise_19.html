@@ -22,8 +22,10 @@
 
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-            title.innerHTML = `${Number(form.numero_1.value) % Number(form.numero_2.value)}`;
-        });
+            Number(form.numero_1.value) % Number(form.numero_2.value) == 0
+                ? (response.innerHTML = `Si es divisible`)
+                : (response.innerHTML = 'No es divisible');
+            });
     </script>
 </body>
 </html>
