@@ -10,8 +10,8 @@
     <h1 id="title">Hola!</h1>
     <form id="form" action="" method="post">
         <label for="name">
-        <p>¿Cómo te llamas?</p>
-        <input class="nombre_usuario" name="name" type="text" placeholder="Nombre" required>
+        <p>¿Con los mismos problemas del ejercicio anterior? | Yo te diré si es par o impar </p>
+        <input class="numero_usuario" name="numero" type="number" placeholder="Numero" required>
         <button type="submit" class="btn btn-outline-primary" id="send-res">Enviar</button>
         </label>
     </form>
@@ -21,7 +21,7 @@
 
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-            title.innerHTML = `¡¡Hola ${form.name.value}!!`;
+            Number(form.numero.value) % 2 == 0 ? (title.innerHTML = 'Es par') : (title.innerHTML = 'Es impar');
         });
     </script>
 </body>

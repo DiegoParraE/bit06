@@ -10,8 +10,8 @@
     <h1 id="title">Hola!</h1>
     <form id="form" action="" method="post">
         <label for="name">
-        <p>¿Cómo te llamas?</p>
-        <input class="nombre_usuario" name="name" type="text" placeholder="Nombre" required>
+        <p>¿Que numero quieres aumentar por 3?</p>
+        <input class="numero_usuario" name="numero" type="number" placeholder="numero" required>
         <button type="submit"  id="send-res">Enviar</button>
         </label>
     </form>
@@ -21,7 +21,6 @@
 
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-
             title.innerHTML = Number(form.numero.value) * 3;
         });
     </script>

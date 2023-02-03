@@ -10,8 +10,15 @@
     <h1 id="title">Hola!</h1>
     <form id="form" action="" method="post">
         <label for="name">
-        <p>¿Cómo te llamas?</p>
-        <input class="nombre_usuario" name="name" type="text" placeholder="Nombre" required>
+        <p>¿Somos Buenisimos en las operaciones matematicas ?</p>
+        <input class="numero_usuario" name="numero" type="number" placeholder="Numero" required>
+        <input class="numero_usuario" name="numero" type="number" placeholder="Numero" required>
+        <select name="operacion" required>
+            <option value="suma">Suma</option>
+            <option value="resta" selected>Resta</option>
+            <option value="multiplicacion">Multiplicacion</option>
+            <option value="division">Division</option>
+        </select>
         <button type="submit" class="btn btn-outline-primary" id="send-res">Enviar</button>
         </label>
     </form>
@@ -21,7 +28,23 @@
 
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-            title.innerHTML = `¡¡Hola ${form.name.value}!!`;
+                switch (form.operacion.value) {
+            case 'suma':
+                title.innerHTML = `${Number(form.numero_1.value) + Number(form.numero_2.value)}`;
+                break;
+
+            case 'resta':
+                title.innerHTML = `${Number(form.numero_1.value) - Number(form.numero_2.value)}`;
+                break;
+
+            case 'multiplicacion':
+                title.innerHTML = `${Number(form.numero_1.value) * Number(form.numero_2.value)}`;
+                break;
+
+            case 'division':
+                title.innerHTML = `${Number(form.numero_1.value) / Number(form.numero_2.value)}`;
+                break;
+        }
         });
     </script>
 </body>
